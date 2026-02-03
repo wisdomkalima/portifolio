@@ -19,8 +19,8 @@ My expertise spans data analysis using tools like SPSS, STATA, Power BI, and Exc
 
 Throughout my career, I have contributed to projects in climate-smart agriculture, electoral management, and education, demonstrating my ability to handle complex data and coordinate effectively with diverse teams and stakeholders.`,
             location: 'Zomba, Malawi',
-            email: 'wisdom.kalima@email.com',
-            phone: '+265 888 XXX XXX',
+            email: 'kalimawisdom72@.com',
+            phone: '+265 996 540 072 | +265 887 842 101',
             available: true,
         },
     })
