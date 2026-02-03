@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id          Int      @id @default(autoincrement())
+  name        String
+  title       String
+  bio         String
+  location    String
+  email       String
+  phone       String
+  cvUrl       String?
+  available   Boolean  @default(true)
+}
+
+model Experience {
+  id          Int      @id @default(autoincrement())
+  title       String
+  company     String
+  period      String
+  description String   // Stored as JSON string or separated by newlines
+  order       Int      @default(0)
+}
+
+model Education {
+  id          Int      @id @default(autoincrement())
+  degree      String
+  institution String
+  period      String
+  details     String
+  order       Int      @default(0)
+}
+
+model Skill {
+  id          Int      @id @default(autoincrement())
+  name        String
+  category    String?  // e.g. "Frontend", "Backend"
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  technologies String // Comma separated or JSON
+  link        String?
+  imageUrl    String?
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  content   String
+  createdAt DateTime @default(now())
+}
